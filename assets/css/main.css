@@ -1,0 +1,187 @@
+/* ケンミル */ /* 神様最高 */
+
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../webfonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../webfonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../webfonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: "black";
+  font-style: normal;
+}
+
+/* ルート */
+:root {
+  /* Colors Basic */
+  --color-basic-01: #ffffff;
+  --color-basic-02: #808080;
+  --color-basic-03: #000000;
+  /* Colors Theme */
+  --color-theme-01: #e0e8ff; /* Pale Blue */
+  --color-theme-02: #3829e0; /* Bright Blue */
+  --color-theme-03: #f5f7ff; /* Very Pale Blue */
+  --color-theme-04: #7280a7; /* Desaturated Blue */
+  --color-theme-05: #1f2f56; /* Dark Blue */
+  /* Typography */
+  /* Body Copy */
+  --font-size-paragraph: 16px;
+  /* Font */
+  --font-family: "Red Hat Display", sans-serif;
+  --font-weight-01: 500; /* Medium */
+  --font-weight-02: 700; /* Bold */
+  --font-weight-03: 900; /* Black */
+  /* Padding */
+  --padding-defalut: 1rem;
+  /* Border */
+  --border-defalut: 1px solid #000000;
+  --border-radius-default: 15px;
+  /* Margin */
+  --margin-defalut: 0.25rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--color-theme-02);
+}
+
+a:hover,
+a:active {
+  color: var(--color-theme-04);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ボディー */
+body {
+  background-color: var(--color-basic-01);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--color-03);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-theme-01);
+  background-image: url("/assets/img/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  border-radius: var(--border-radius-default);
+  background-color: var(--color-basic-01);
+  width: 375px;
+  min-height: 600px;
+  text-align: center;
+}
+
+.card__hero-img {
+  border-radius: 15px 15px 0 0;
+  background-image: url("/assets/img/hero-img.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 200px;
+}
+
+.card__content {
+  margin: 0 40px 25px 40px;
+}
+
+.card__title {
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.card__message {
+  color: var(--color-theme-04);
+  margin-bottom: 20px;
+}
+
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-defalut);
+  border-radius: 15px;
+  background-color: var(--color-theme-03);
+  margin-bottom: 20px;
+}
+
+.card__description p {
+  color: var(--color-theme-04);
+  text-align: left;
+}
+
+.card__order-btn {
+  padding: var(--padding-defalut);
+  border: none;
+  border-radius: var(--border-radius-default);
+  background-color: var(--color-theme-02);
+  margin-bottom: 20px;
+  color: var(--color-theme-01);
+  width: 100%;
+  font-weight: bold;
+}
+
+.card__order-btn:hover,
+.card__order-btn:active {
+  background-color: var(--color-theme-04);
+}
+
+.card__cancel-link {
+  color: var(--color-theme-04);
+  text-decoration: none;
+}
+
+.card__cancel-link:hover,
+.card__cancel-link:active {
+  color: var(--color-theme-05);
+}
+
+/* このクラスを使用すれば、物事を非表示にします。 */
+.hidden {
+  display: none;
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 90%;
+  }
+}
